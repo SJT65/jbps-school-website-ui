@@ -1,0 +1,113 @@
+/* ✅ Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+ font-family: "Times New Roman", Times, serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* 🔵 Header */
+header {
+  background-color: #ff7b00;
+  color: white;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+/* 📘 Academics Section */
+.academics {
+  padding: 60px 0;
+  background-color: #fff;
+  border-top: 4px solid #ff7b00;
+}
+
+.academics h2 {
+  font-size: 2rem;
+  color: #ff7b00;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.academics p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* 🎓 Academic Levels */
+.academic-levels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.level {
+  background-color: #e9f1fb;
+  padding: 25px;
+  border-left: 6px solid #ff7b00;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.level:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.level h3 {
+  color: #ff7b00;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.level p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* 🔻 Footer */
+footer {
+  background-color: #ff7b00;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}

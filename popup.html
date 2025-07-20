@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Popup Form Example</title>
+    <style>
+      /* Transparent popup overlay */
+      .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.4); /* slightly darker transparent */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        backdrop-filter: blur(6px); /* background blur effect */
+      }
+
+      /* Glassmorphism style popup box */
+      .popup-box {
+        background: rgba(255, 255, 255, 0.15); /* transparent white */
+        padding: 20px;
+        width: 320px;
+        border-radius: 15px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: white;
+      }
+
+      /* Input and textarea fields */
+      .popup-box input,
+      .popup-box textarea {
+        width: 100%;
+        margin-bottom: 12px;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 8px;
+        border: 1px solid rgba(252, 118, 118, 0.3);
+        background: rgba(253, 236, 4, 0.418);
+        color: white;
+      }
+
+      /* Submit button */
+      .popup-box button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: #00c896;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 8px;
+        transition: background-color 0.3s;
+      }
+
+      .popup-box button:hover {
+        background-color: #009f79;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Popup HTML -->
+    <div class="popup-overlay" id="popupOverlay">
+      <div class="popup-box" id="popupBox">
+        <h2>Admission Inquiry</h2>
+        <form id="popupForm">
+          <input type="text" placeholder="Your Name" required />
+          <input type="tel" placeholder="Mobile Number" required />
+          <textarea placeholder="Your Query" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
